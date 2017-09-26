@@ -9,7 +9,7 @@
     <string name="textfield_username">Username</string>
     <string name="textfield_email">Email</string>
     <string name="textfield_password">Password</string>
-    <string name="uploading_image">Uploading image...</string>
+    <string name="uploading_image">Uploading image…</string>
     <string name="error_accessing_coordinates">Location coordinates are not available, using default.</string>
     <string name="error_uploading_image">Error uploading image. Please try again later</string>
     <string name="error_bad_image">Bad image! Should be at least 600px wide</string>
@@ -17,4 +17,5 @@
     <string name="error_creating_new_user">Error creating new user. Ensure file size is not bigger than 1 Mb</string>
     <string name="add_image_description">Description</string>
     <string name="add_imge_hashtag">Hashtag</string>
+    <string name="processing_login">Processing login/signup…</string>
 </resources>

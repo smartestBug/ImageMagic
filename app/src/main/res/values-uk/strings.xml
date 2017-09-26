@@ -9,11 +9,12 @@
     <string name="textfield_username">І\'мя користувача</string>
     <string name="textfield_email">Електронна адреса</string>
     <string name="textfield_password">Пароль</string>
-    <string name="uploading_image">Світлина завантажується...</string>
+    <string name="uploading_image">Світлина завантажується…</string>
     <string name="error_uploading_image">Помилка при загрузці файла. Спробуйте пізніше</string>
     <string name="error_bad_image">Світлина не підходить! Повинна бути щонайменьше 600 пікселів в ширину</string>
     <string name="error_bad_login">Невдала спроба входу</string>
     <string name="error_creating_new_user">Помилка при створенні нового користувача. Переконайтесь, що розмір файлу аватару не більше ніж 1 Мб</string>
     <string name="add_image_description">Опис</string>
     <string name="add_imge_hashtag">Хештег</string>
+    <string name="processing_login">Віиконується вхід/реєстрація…</string>
 </resources>

@@ -10,7 +10,7 @@ import io.reactivex.disposables.CompositeDisposable;
 
 public class AddImagePresenter implements BasePresenter.AddImagePresenter {
 
-    BaseView.AddImageView myView;
+    private BaseView.AddImageView myView;
 
     private CompositeDisposable subscriptions = new CompositeDisposable();
 
@@ -21,7 +21,7 @@ public class AddImagePresenter implements BasePresenter.AddImagePresenter {
     @Override
     public void uploadImage(String token, String imagePath, String description, String hashtag, String latitude, String longtitude) {
 
-        myView.showWaitDialog();
+        myView.showWaitDialog(R.string.uploading_image);
 
         subscriptions.add(
                 NetworkEngine.uploadImage(token, imagePath, description, hashtag, latitude, longtitude)

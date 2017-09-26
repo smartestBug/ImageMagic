@@ -173,4 +173,10 @@ public class ImagesListActivity extends IMAppCompatActivity implements BaseView.
                 .into(ivGifPreview);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        myPresenter.unsubscribeObservers();
+    }
+
 }

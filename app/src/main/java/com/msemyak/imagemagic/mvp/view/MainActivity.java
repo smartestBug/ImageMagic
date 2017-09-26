@@ -140,4 +140,10 @@ public class MainActivity extends IMAppCompatActivity implements BaseView.MainVi
         return valid;
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        myPresenter.unsubscribeObservers();
+    }
+
 }

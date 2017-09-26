@@ -2,7 +2,6 @@ package com.msemyak.imagemagic.mvp.view;
 
 import android.Manifest;
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.location.LocationManager;
 import android.os.Bundle;
@@ -43,8 +42,6 @@ public class AddImageActivity extends IMAppCompatActivity implements BaseView.Ad
 
     String fallbackLatitude2 = "41.386735";
     String fallbackLongitude2 = "9.157973";
-
-    private ProgressDialog progressDialog;
 
     BasePresenter.AddImagePresenter myPresenter;
 
@@ -139,22 +136,15 @@ public class AddImageActivity extends IMAppCompatActivity implements BaseView.Ad
     }
 
     @Override
-    public void showWaitDialog() {
-        progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage(getString(R.string.uploading_image));
-        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        progressDialog.show();
-    }
-
-    @Override
-    public void dismissWaitDialog() {
-        progressDialog.dismiss();
-    }
-
-    @Override
     public void doneUploading() {
         setResult(Activity.RESULT_OK);
         finish();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        myPresenter.unsubscribeObservers();
     }
 
 }
