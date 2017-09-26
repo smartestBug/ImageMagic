@@ -1,7 +1,5 @@
 package com.msemyak.imagemagic.mvp.presenter;
 
-import android.util.Log;
-
 import com.msemyak.imagemagic.mvp.BasePresenter;
 import com.msemyak.imagemagic.mvp.BaseView;
 import com.msemyak.imagemagic.mvp.model.NetworkEngine;
@@ -14,9 +12,9 @@ import io.reactivex.disposables.CompositeDisposable;
 
 public class ImagesListPresenter implements BasePresenter.ImagesListPresenter {
 
-    BaseView.ImagesListView myView;
-    List<Image> imageList;
-    String token;
+    private BaseView.ImagesListView myView;
+    private List<Image> imageList;
+    private String token;
 
     private CompositeDisposable subscriptions = new CompositeDisposable();
 

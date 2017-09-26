@@ -15,17 +15,17 @@ import com.msemyak.imagemagic.utils.GlideApp;
 import java.util.List;
 
 
-public class RVAdapterImages extends RecyclerView.Adapter<RVAdapterImages.myViewHolder> {
+class RVAdapterImages extends RecyclerView.Adapter<RVAdapterImages.myViewHolder> {
 
     private List<Image> imagesList;
     private Context context;
 
-    public RVAdapterImages(List<Image> imagesList, Context context) {
+    RVAdapterImages(List<Image> imagesList, Context context) {
         this.imagesList = imagesList;
         this.context = context;
     }
 
-    public void setNewData(List<Image> imagesList) {
+    void setNewData(List<Image> imagesList) {
         this.imagesList = imagesList;
     }
 
@@ -44,6 +44,7 @@ public class RVAdapterImages extends RecyclerView.Adapter<RVAdapterImages.myView
                 .load(imageForDataBind.getSmallImagePath())
                 .centerCrop()
                 .into(holder.ivImage);
+
         holder.tvWeather.setText(imageForDataBind.getParameters().getWeather());
         holder.tvAddress.setText(imageForDataBind.getParameters().getAddress());
 
@@ -54,13 +55,13 @@ public class RVAdapterImages extends RecyclerView.Adapter<RVAdapterImages.myView
         return imagesList.size();
     }
 
-    public static class myViewHolder extends RecyclerView.ViewHolder {
+    static class myViewHolder extends RecyclerView.ViewHolder {
 
-        public ImageView ivImage;
-        public TextView tvWeather;
-        public TextView tvAddress;
+        ImageView ivImage;
+        TextView tvWeather;
+        TextView tvAddress;
 
-        public myViewHolder(View v) {
+        myViewHolder(View v) {
             super(v);
             ivImage = (ImageView) v.findViewById(R.id.ivImage);
             tvWeather = (TextView) v.findViewById(R.id.tvWeather);

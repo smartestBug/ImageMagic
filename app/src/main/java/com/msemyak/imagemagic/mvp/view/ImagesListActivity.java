@@ -17,7 +17,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
-
 import com.msemyak.imagemagic.R;
 import com.msemyak.imagemagic.mvp.BasePresenter;
 import com.msemyak.imagemagic.mvp.BaseView;
@@ -55,8 +54,6 @@ public class ImagesListActivity extends IMAppCompatActivity implements BaseView.
         super.onCreate(savedInstanceState);
 
         token = getIntent().getStringExtra("token");
-        //token = "26f062965ee2097d375fe8bd2cb86a6a"; //dummy
-        //token = "8695058e1e1ad453bc3b56569e7e6af1"; //cowboy
 
         setSupportActionBar(toolbarMain);
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);

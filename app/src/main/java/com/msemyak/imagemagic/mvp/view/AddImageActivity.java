@@ -40,9 +40,6 @@ public class AddImageActivity extends IMAppCompatActivity implements BaseView.Ad
     String fallbackLatitude = "52.37308";
     String fallbackLongitude = "4.892404";
 
-    String fallbackLatitude2 = "41.386735";
-    String fallbackLongitude2 = "9.157973";
-
     BasePresenter.AddImagePresenter myPresenter;
 
     @Override
@@ -113,9 +110,7 @@ public class AddImageActivity extends IMAppCompatActivity implements BaseView.Ad
     private void uploadImage(LatLong location) {
 
         if (location.hasCoordinates) {
-            //TODO - uncomment in production
-            //myPresenter.uploadImage(token, imagePath, etImageDescription.getText().toString(), etImageHashtag.getText().toString(), location.getLatitudeString(), location.getLongtitudeString());
-            myPresenter.uploadImage(token, imagePath, etImageDescription.getText().toString(), etImageHashtag.getText().toString(), fallbackLatitude2, fallbackLongitude2);
+            myPresenter.uploadImage(token, imagePath, etImageDescription.getText().toString(), etImageHashtag.getText().toString(), location.getLatitudeString(), location.getLongtitudeString());
         }
         else {
             showMessage(getString(R.string.error_accessing_coordinates));
