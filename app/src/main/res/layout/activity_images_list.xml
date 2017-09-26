@@ -6,7 +6,7 @@
     android:id="@+id/constrainedLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.msemyak.dev.imagemagic.activities.images_list.ImagesListActivity">
+    tools:context=".mvp.view.ImagesListActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/tbMain"

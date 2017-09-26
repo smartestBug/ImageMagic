@@ -19,7 +19,7 @@
         android:paddingTop="32dp"
         android:descendantFocusability="beforeDescendants"
         android:focusableInTouchMode="true"
-        tools:context="com.msemyak.dev.imagemagic.activities.main.MainActivity">
+        tools:context=".mvp.view.MainActivity">
 
         <ImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -30,20 +30,6 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
-
-        <!--
-        <de.hdodenhof.circleimageview.CircleImageView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/ivAvatar"
-            android:layout_width="144dp"
-            android:layout_height="144dp"
-            android:src="@mipmap/add_avatar_icon"
-            app:civ_border_color="@color/white"
-            app:civ_border_width="5dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-        -->
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/textInputLayout"
